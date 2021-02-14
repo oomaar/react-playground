@@ -3,7 +3,7 @@ import "./CssScreen.css";
 
 const CssScreen = () => {
     return (
-        <div>
+        <div className="body">
             <main>
                 <h1>CSS Here</h1>
                 <p>

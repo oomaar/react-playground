@@ -16,4 +16,19 @@ main {
     box-shadow: var(--box-shadow);
     padding: var(--spacing);
     margin-top: calc(2 * var(--spacing));
+    background-color: var(--grey-30);
+    color: var(--error);
 }
+
+main > h1 {
+    color: var(--text);
+}
+
+.body {
+    background-color: var(--grey-10);
+    height: 95vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
