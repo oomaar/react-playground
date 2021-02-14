@@ -1,0 +1,19 @@
+:root {
+    --text: #4a4a4a;
+    --error: #ff2744;
+    --grey-10: #eaeaea;
+    --grey-20: #c0c0c0;
+    --grey-30: #9f9f9f;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
+    --spacing: 10px;
+    --spacing-reset: 0;
+}
+
+main {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing);
+    margin-top: calc(2 * var(--spacing));
+}

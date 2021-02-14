@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import styled from "styled-components/macro";
 
 const HomeScreen = () => {
     const [toggle, setToggle] = useState(false);
@@ -22,17 +23,24 @@ const HomeScreen = () => {
     }, [toggle]);
     
     return (
-        <div>
-            <div className="text__container">
+        <Container>
                 <h1>Title Lands Here</h1>
                 {toggle && (
                     <p>Text Lands Here</p>
                 )}
                 <button onClick={handleToggle}>Click Me</button>
                 <Link to="/card">Card Component</Link>
-            </div>
-        </div>
+                <Link to="/css">CSS Component</Link>
+        </Container>
     )
 };
 
 export default HomeScreen;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px;
+`;

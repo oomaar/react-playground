@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import CardScreen from "./screens/CardScreen";
-import HomeScreen from "./screens/HomeScreen";
+import { HomeScreen, CardScreen, CssScreen } from "./screens";
 
 function App() {
   return (
@@ -9,6 +8,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomeScreen} />
         <Route exact path="/card" component={CardScreen} />
+        <Route exact path="/css" component={CssScreen} />
       </Switch>
     </Router>
   );
