@@ -1,8 +1,5 @@
 // import { useContext } from 'react';
-import {
-    useTheme,
-    useUpdateTheme
-} from "../screens/ThemeContext";
+import { useTheme, useUpdateTheme, ThemeProvider } from "../screens/ThemeContext";
 
 const FunctionalContextComponent = () => {
     const darkTheme = useTheme();
@@ -19,10 +16,12 @@ const FunctionalContextComponent = () => {
     }
 
     return (
-        <div style={themeStyles}>
-            function theme
+        <ThemeProvider>
+            <div style={themeStyles}>
+                function theme
             <button onClick={toggleTheme}>Darker Than This</button>
-        </div>
+            </div>
+        </ThemeProvider>
     )
 };
 
