@@ -29,8 +29,7 @@ const HomeScreen = () => {
                     <p>Text Lands Here</p>
                 )}
                 <button onClick={handleToggle}>Click Me</button>
-                <Link to="/card">Card Component</Link>
-                <Link to="/css">CSS Component</Link>
+                <Link to="/context">context</Link>
         </Container>
     )
 };
