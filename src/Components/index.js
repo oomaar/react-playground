@@ -1,1 +1,2 @@
-// export { default as Card } from "./Card";
+export { default as ClassContextComponent } from "./ClassContextComponent";
+export { default as FunctionalContextComponent } from "./FunctionalContextComponent";

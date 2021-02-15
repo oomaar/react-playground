@@ -1,10 +1,13 @@
-import React from 'react';
+// import { useState, createContext } from 'react';
+import { ClassContextComponent, FunctionalContextComponent } from "../Components";
+import { ThemeProvider } from "./ThemeContext";
 
 const ContextScreen = () => {
     return (
-        <div>
-            
-        </div>
+        <ThemeProvider>
+            {/* <ClassContextComponent /> */}
+            <FunctionalContextComponent />
+        </ThemeProvider>
     )
 };
 
