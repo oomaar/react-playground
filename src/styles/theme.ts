@@ -3,6 +3,7 @@ export const theme = {
     bg: "#131314",
     surface: "#000000",
     border: "rgba(255, 255, 255, 0.08)",
+    title: "#ffffff",
     text: "#afafaf",
     text_danger: "#fff",
     primary: "#108027",
