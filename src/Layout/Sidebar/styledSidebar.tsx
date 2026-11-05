@@ -6,9 +6,9 @@ export const SidabarContainer = styled.aside`
   inset: 16px;
   right: unset;
   width: ${SidebarWidth};
-  background: #000;
+  background: ${({ theme }) => theme.colors.surface};
   border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.shadows.lg};
   padding: 12px;
   display: flex;
   flex-direction: column;

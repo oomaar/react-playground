@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Transition } from "../../../styles/constants";
 
 export const SidebarListUL = styled.ul`
   margin: 32px 0px auto;
-  background: #131314;
+  background: ${({ theme }) => theme.colors.bg};
   border-radius: 8px;
 
   :first-child,
@@ -19,10 +20,11 @@ export const SidebarListUL = styled.ul`
 `;
 
 export const SidebarListLI = styled.li<{ $active: boolean }>`
-  background: ${({ $active }) => ($active ? "#1827" : "transparent")};
+  background: ${({ theme, $active }) =>
+    $active ? theme.colors.primary : "transparent"};
 
   :hover {
-    background: #1827;
+    background: ${({ theme }) => theme.colors.primary};
   }
 
   a {
@@ -30,7 +32,7 @@ export const SidebarListLI = styled.li<{ $active: boolean }>`
     display: flex;
     align-items: center;
     gap: 0px 12px;
-    transition: all 0.5s ease;
+    transition: ${Transition};
     font-weight: 700;
     color: #fff;
     background: transparent;

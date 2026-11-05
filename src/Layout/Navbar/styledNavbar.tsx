@@ -12,10 +12,10 @@ const rotateLogo = keyframes`
 `;
 
 export const NavbarNav = styled.nav`
-  background: #000;
+  background: ${({ theme }) => theme.colors.surface};
   padding: 12px 16px;
   border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.shadows.lg};
   height: ${NavbarHeight};
   display: flex;
   align-items: center;
