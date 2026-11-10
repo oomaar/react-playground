@@ -1,0 +1,46 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+    background: ${({ theme }) => theme.colors.bg};
+    color: ${({ theme }) => theme.colors.text};
+    font-family: "Forum", serif;
+  }
+
+  a, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    padding: 0px;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+
+  button {
+    outline: 0px;
+    cursor: pointer;
+  }
+
+  input {
+    background: transparent;
+    outline: 0px;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+  }
+`;

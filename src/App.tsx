@@ -1,7 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "./Layout/Layout";
+import { HomeScreen } from "./Screens";
+
 export function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomeScreen />} />
+          <Route path="*" element={<>Not Found</>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
