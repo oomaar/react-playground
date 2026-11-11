@@ -1,13 +1,24 @@
-import { createServer } from "node:http";
+import cors from "cors";
+import express from "express";
+import { UsersRouter } from "./routes/users.route.ts";
+
+const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  }),
+);
+app.use(express.json());
+
+app.use("/api/users", UsersRouter);
 
 const PORT = Number(process.env.PORT) || 4000;
 
-const server = createServer((_req, res) => {
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.end(JSON.stringify({ message: "Hello World" }));
-});
+async function startServer() {
+  app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}?page=1&limit=10`);
+  });
+}
 
-server.listen(PORT, () => {
-  console.log("Hello World");
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+startServer();
