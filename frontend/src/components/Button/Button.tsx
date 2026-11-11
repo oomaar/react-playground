@@ -1,13 +1,17 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import { Btn } from "./styledButton";
 
 export type ButtonVariant = "Primary" | "Ghost";
 
-type ButtonProps = {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant: ButtonVariant;
   children: ReactNode;
 };
 
-export function Button({ variant, children }: ButtonProps) {
-  return <Btn $variant={variant}>{children}</Btn>;
+export function Button({ variant, children, ...props }: ButtonProps) {
+  return (
+    <Btn {...props} $variant={variant}>
+      {children}
+    </Btn>
+  );
 }
