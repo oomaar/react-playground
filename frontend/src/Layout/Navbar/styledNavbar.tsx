@@ -1,15 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { NavbarHeight, SidebarWidth } from "../../styles/constants";
-
-const rotateLogo = keyframes`
-  from {
-    transform: rotateX(0deg);
-  }
-
-  to {
-    transform: rotateX(360deg);
-  }
-`;
 
 export const NavbarNav = styled.nav`
   background: ${({ theme }) => theme.colors.surface};
@@ -30,10 +20,6 @@ export const NavbarLogo = styled.div`
   align-items: center;
   gap: 0px 8px;
   color: #fff;
-
-  svg {
-    animation: ${rotateLogo} 5s ease infinite;
-  }
 
   p {
     font-weight: 700;

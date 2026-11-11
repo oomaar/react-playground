@@ -13,7 +13,7 @@ export function SidebarList() {
   }, [pathname]);
 
   return (
-    <SidebarListUL>
+    <SidebarListUL style={{ marginTop: "64px" }}>
       {sidebarLinks.map((link) => (
         <SidebarListLI
           $active={activeLink === link.path}
