@@ -23,7 +23,6 @@ type ModalProps = {
 type ModalComponent = React.FC<ModalProps> & {
   Header: typeof ModalHeader;
   Title: typeof ModalTitle;
-  Body: typeof ModalBody;
   Footer: typeof ModalFooter;
 };
 
@@ -75,7 +74,7 @@ const Modal: ModalComponent = ({
           ref={modalScopeRef}
           tabIndex={-1}
         >
-          {children}
+          <ModalBody>{children}</ModalBody>
         </ModalContainer>
       </Overlay>
     </Portal>
@@ -84,7 +83,6 @@ const Modal: ModalComponent = ({
 
 Modal.Header = ModalHeader;
 Modal.Title = ModalTitle;
-Modal.Body = ModalBody;
 Modal.Footer = ModalFooter;
 
 export { Modal };
